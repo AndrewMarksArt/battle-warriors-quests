@@ -1,16 +1,20 @@
 body {
     display: grid;
     place-items: center;
-    background-color: #b4a7d6;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #674A38;
     }
     
     .wrapper {
-    background-color: #fff9e6;
+    background-color: #191B24;
     padding: 20px;
     border-radius: 10px;
     }
     
-    h1 {
-    color: #8873be;
+    h1, pattern {
+    color: #FDE7D5;
+    }
+
+    nav-bar {
+        background-color: #674A38;
     }
