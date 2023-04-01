@@ -1,6 +1,6 @@
 import "../css/main.css"
 
-export default function Welcome() {
+export default function Hero() {
     return (
         <>
         <div className="wrapper">
