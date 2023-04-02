@@ -1,3 +1,35 @@
+:root {
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+
+    --fw-light: 300;
+    --fw-reg: 400;
+    --fw-semi: 600;
+    --fw-bold: 900;
+
+    --clr-main-bg: #191B24;
+    --clr-alt-bg: #674A38;
+    --clr-main: #FDE7D5;
+    --clr-second: #3C1B23;
+    --clr-alt-main: #E5F6EE;
+    --clr-alt-second: #15511D;
+    --clr-main-hover: #F16D1B;
+    --clr-alt-hover: #72C19B;
+
+    
+    --fs-h1: 40px;
+    --fs-sub-head: 32px;
+    --fs-h2: 24px;
+    --fs-h3: 1.25rem;
+    --fs-body: 22px;
+    --fs-body-sm: 16px;
+    --fs-xl: 60px;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+
 body, html {
     margin: 0;
     padding: 0;
@@ -38,14 +70,14 @@ body, html {
     align-items: center;
     justify-content: center;
     min-height: calc(100vh - 60px);
-    margin-top: -80px;
+    margin-top: -100px;
 }
 
 .main-img {
     position: absolute;
     max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
+    max-height: 70vh;
+    
 }
 
 .content {
@@ -68,4 +100,24 @@ body, html {
 .divider-image {
     width: 100%;
     max-height: 100%;
+}
+
+.headline, .subhead {
+    text-align: center;
+    margin: 0;
+}
+
+.subhead {
+    margin: 20px 20vw 32px 20vw;
+}
+
+.input-text {
+    height: .5rem;
+    width: 20vw;
+    padding: 12px;
+    border-color: transparent;
+    background-color: white;
+    opacity: 80%;
+    box-shadow: var(--bs);
+    color: var(--clr-main-bg);
 }
