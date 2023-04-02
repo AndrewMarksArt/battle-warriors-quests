@@ -1,20 +1,43 @@
-body {
-    display: grid;
-    place-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #674A38;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     }
     
     .wrapper {
     background-color: #191B24;
     padding: 20px;
-    border-radius: 10px;
     }
     
     h1, pattern {
     color: #FDE7D5;
     }
 
-    nav-bar {
+    .nav-header {
         background-color: #674A38;
+    }
+
+    .wrapper {
+        height: 400px;
+    }
+
+    .gateway-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: calc(100% - 60px);
+    }
+
+    .main-img {
+        position: absolute;
+        object-fit: cover;
+    }
+
+    .cta-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        z-index: 10;
     }
