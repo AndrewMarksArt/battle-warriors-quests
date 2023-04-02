@@ -5,12 +5,12 @@ export default function Navbar () {
         <>
         <header className="navbar">
             <div className="site-title">
-                Battle Warriors
+                <img src="./img/logo.png" className="logo"></img>
             </div>
 
             <nav className="navbar-links">
-                <a href="https://www.twitter.com/battlevikingnft">Twitter</a>
-                <a href="https://discord.gg/battle-warriors">Discord</a>
+                <a href="https://www.twitter.com/battlevikingnft" className="navbar-link">Twitter</a>
+                <a href="https://discord.gg/battle-warriors" className="navbar-link">Discord</a>
             </nav>
         </header>
         </>
