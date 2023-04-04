@@ -9,8 +9,8 @@ export default function Navbar () {
             </div>
 
             <nav className="navbar-links">
-                <a href="https://www.twitter.com/battlevikingnft" className="navbar-link">Twitter</a>
-                <a href="https://discord.gg/battle-warriors" className="navbar-link">Discord</a>
+                <a href="https://www.twitter.com/battlevikingnft" target="_blank" className="navbar-link">Twitter</a>
+                <a href="https://discord.gg/battle-warriors" target="_blank" className="navbar-link">Discord</a>
             </nav>
         </header>
         </>

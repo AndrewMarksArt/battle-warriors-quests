@@ -5,14 +5,27 @@ export default function Hero() {
     // State for email input
     const [email, setEmail] = useState('');
 
+    const handleChange = (event) => {
+        setEmail(event.target.value);
+    };
+
+    const validateEmail = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
+        if (!validateEmail(email)) {
             alert('Please enter a valid email address.');
             return;
         }
+
+        // need to save emails and not just log them
+
+        console.log('Email: ', email); // print email to the console
+        setEmail(''); // clear the text input
 
     };
 
@@ -31,7 +44,7 @@ export default function Hero() {
                         <input 
                             type="email"
                             value={email}
-                            onChange={(e) => setEmail(e.target.value)}
+                            onChange={handleChange}
                             placeholder="Enter your email address" 
                             className="input-text"
                         />
@@ -41,7 +54,7 @@ export default function Hero() {
                         <button 
                             type="button" 
                             className="button-secondary"
-                            onClick={() => window.open('http://discord.gg/battle_warriors', '_blank')}
+                            onClick={() => window.open('https://discord.gg/battle-warriors', '_blank')}
                         >
                             And Join Discord
                         </button>
