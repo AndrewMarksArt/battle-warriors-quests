@@ -1,7 +1,7 @@
 import "../css/main.css"
-import React, { useState } from "react";
-import { addDoc, collection } from "@firebase/firestore";
-import { firestore } from "../firebase_setup/firebase";
+import { useState } from "react";
+import { uploadEmailToS3 } from "../s3";
+
 
 export default function Hero() {
     // State for email input
@@ -18,27 +18,24 @@ export default function Hero() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-      
+
         if (!validateEmail(email)) {
-          alert("Please enter a valid email address.");
-          return;
+            alert("Please enter a valid email address.");
+            return;
         }
-      
-        const ref = collection(firestore, "quest_emails");
-      
-        let data = {
-          email: email,
-        };
-      
+
+        console.log("Submitting email:", email);
+
         try {
-          await addDoc(ref, data);
-          console.log("Email saved: ", email);
+            await uploadEmailToS3(email);
+            console.log("Email saved: ", email);
+            setEmail(""); // Clear the text input
         } catch (err) {
-          console.log(err);
+            console.error("Error saving email:", err);
         }
+    };
+
       
-        setEmail(""); // Clear the text input
-      };
 
     return (
         <>
