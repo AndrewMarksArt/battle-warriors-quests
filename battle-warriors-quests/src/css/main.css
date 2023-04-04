@@ -202,6 +202,11 @@ body, html {
         display: none;
     }
 
+    .logo {
+        height: 100%;
+        max-width: 50vw;
+    }
+
     .title {
         max-width: 70vw;
     }
