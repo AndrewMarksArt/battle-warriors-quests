@@ -5,7 +5,7 @@ export default function Navbar () {
         <>
         <header className="navbar">
             <div className="site-title">
-                <img src="./img/logo.png" className="logo"></img>
+                <img src="../img/logo.png" className="logo"></img>
             </div>
 
             <nav className="navbar-links">
