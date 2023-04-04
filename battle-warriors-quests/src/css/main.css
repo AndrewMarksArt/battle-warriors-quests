@@ -75,7 +75,7 @@ body, html {
     align-items: center;
     justify-content: center;
     min-height: calc(100vh - 60px);
-    margin-top: -100px;
+    margin-top: -110px;
 }
 
 .main-img {
@@ -204,7 +204,7 @@ body, html {
 
     .logo {
         height: 100%;
-        max-width: 50vw;
+        max-width: 75vw;
     }
 
     .title {
@@ -216,6 +216,7 @@ body, html {
         margin-right: 24px;
         font-size: 1.2rem;
         margin-bottom: 0px;
+        line-height: 2rem;
     }
 
     .input-text {
