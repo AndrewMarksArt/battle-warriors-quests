@@ -1,5 +1,7 @@
 import "../css/main.css"
 import React, { useState } from "react";
+import { addDoc, collection } from "@firebase/firestore";
+import { firestore } from "../firebase_setup/firebase";
 
 export default function Hero() {
     // State for email input
@@ -14,20 +16,29 @@ export default function Hero() {
         return emailRegex.test(email);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-
+      
         if (!validateEmail(email)) {
-            alert('Please enter a valid email address.');
-            return;
+          alert("Please enter a valid email address.");
+          return;
         }
-
-        // need to save emails and not just log them
-
-        console.log('Email: ', email); // print email to the console
-        setEmail(''); // clear the text input
-
-    };
+      
+        const ref = collection(firestore, "quest_emails");
+      
+        let data = {
+          email: email,
+        };
+      
+        try {
+          await addDoc(ref, data);
+          console.log("Email saved: ", email);
+        } catch (err) {
+          console.log(err);
+        }
+      
+        setEmail(""); // Clear the text input
+      };
 
     return (
         <>
