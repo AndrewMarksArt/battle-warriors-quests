@@ -34,7 +34,7 @@ export default function Hero() {
         <div className="main">
             <img src="../img/title.png" className="title"></img>
             <h2 className="subhead">
-                Embark on a legendary quest for glory & honor!<br/>Let the sagas sing of your triumph against the fearsome foes that threaten the realm!
+                Embark on a legendary quest for glory & honor!Let the sagas sing of your triumph against the fearsome foes that threaten the realm!
             </h2>
             <div className="container">
                 <img src="../img/stone_gateway.png" className="main-img"></img>

@@ -203,8 +203,8 @@ body, html {
     }
 
     .logo {
-        height: 100%;
-        max-width: 75vw;
+        margin-right: 20px;
+        width: 85vw;
     }
 
     .title {
